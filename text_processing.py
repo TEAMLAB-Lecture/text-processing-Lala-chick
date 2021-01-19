@@ -34,6 +34,8 @@ def normalize(input_string):
              'extra space'
     """
     lower_string = input_string.lower().split()
+    if not lower_string:
+        return ""
     normalized_string = lower_string[0]
     for string in lower_string[1:]:
         normalized_string = normalized_string + " " + string
@@ -67,5 +69,7 @@ def no_vowels(input_string):
     for string in input_string:
         if string not in vowel:
             no_vowel_string += string
-            
+
     return no_vowel_string
+
+
